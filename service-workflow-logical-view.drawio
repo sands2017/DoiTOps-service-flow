@@ -5,357 +5,401 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
-        <!-- ============================================ -->
+        <!-- TITLE -->
+        <mxCell id="title" value="DoiTOps Service Flow — Logical View&#xa;GitHub Workflow (GitOps Context)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="-30" width="380" height="60" as="geometry" />
+        </mxCell>
+
         <!-- MAIN WORKFLOW (Centre) -->
-        <!-- ============================================ -->
         <mxCell id="wf-main" value="GitHub Workflow&#xa;(GitOps Service Flow)" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontSize=14;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;shadow=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="450" width="220" height="120" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- TRIGGERS (Top-Left) -->
+        <!-- TRIGGERS GROUP (Top-Left) -->
         <!-- ============================================ -->
-        <mxCell id="cat-triggers" value="Triggers" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="80" y="100" width="280" height="40" as="geometry" />
+        <mxCell id="grp-triggers" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="30" y="100" width="370" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="trig-1" value="Push to main / feature branch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="30" y="160" width="180" height="35" as="geometry" />
+        <mxCell id="cat-triggers" value="Triggers" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="50" y="0" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="trig-2" value="Pull Request opened / merged" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="220" y="160" width="180" height="35" as="geometry" />
+        <mxCell id="trig-1" value="Push to main / feature branch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="0" y="60" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="trig-3" value="Scheduled cron trigger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="30" y="205" width="180" height="35" as="geometry" />
+        <mxCell id="trig-2" value="Pull Request opened / merged" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="190" y="60" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="trig-4" value="workflow_dispatch (manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="220" y="205" width="180" height="35" as="geometry" />
+        <mxCell id="trig-3" value="Scheduled cron trigger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="0" y="105" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="trig-5" value="Tag / Release creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="30" y="250" width="180" height="35" as="geometry" />
+        <mxCell id="trig-4" value="workflow_dispatch (manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="190" y="105" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="trig-6" value="Repository dispatch event" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="220" y="250" width="180" height="35" as="geometry" />
+        <mxCell id="trig-5" value="Tag / Release creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="0" y="150" width="180" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="trig-6" value="Repository dispatch event" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-triggers">
+          <mxGeometry x="190" y="150" width="180" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Triggers -> Workflow -->
-        <mxCell id="link-trig" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#b85450;exitX=0.5;exitY=1;entryX=0;entryY=0;" edge="1" source="cat-triggers" target="wf-main" parent="1">
+        <mxCell id="link-trig" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#b85450;" edge="1" source="cat-triggers" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- PRE-CONDITIONS (Top) -->
+        <!-- PRE-CONDITIONS GROUP (Top) -->
         <!-- ============================================ -->
-        <mxCell id="cat-precond" value="Pre-Conditions" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="560" y="80" width="300" height="40" as="geometry" />
+        <mxCell id="grp-precond" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="510" y="80" width="370" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="pre-1" value="Code review approved" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="510" y="140" width="170" height="35" as="geometry" />
+        <mxCell id="cat-precond" value="Pre-Conditions" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="grp-precond">
+          <mxGeometry x="50" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pre-2" value="Branch protection rules met" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="140" width="180" height="35" as="geometry" />
+        <mxCell id="pre-1" value="Code review approved" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="0" y="60" width="170" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="pre-3" value="CI status checks passed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="510" y="185" width="170" height="35" as="geometry" />
+        <mxCell id="pre-2" value="Branch protection rules met" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="180" y="60" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="pre-4" value="Secrets &amp; env vars configured" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="185" width="180" height="35" as="geometry" />
+        <mxCell id="pre-3" value="CI status checks passed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="0" y="105" width="170" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="pre-5" value="Runner available (self-hosted / GitHub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="510" y="230" width="180" height="35" as="geometry" />
+        <mxCell id="pre-4" value="Secrets &amp; env vars configured" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="180" y="105" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="pre-6" value="CODEOWNERS approval obtained" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="700" y="230" width="180" height="35" as="geometry" />
+        <mxCell id="pre-5" value="Runner available (self-hosted / GitHub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="0" y="150" width="180" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="pre-6" value="CODEOWNERS approval obtained" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-precond">
+          <mxGeometry x="190" y="150" width="180" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Pre-Conditions -> Workflow -->
-        <mxCell id="link-precond" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#9673a6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="cat-precond" target="wf-main" parent="1">
+        <mxCell id="link-precond" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#9673a6;" edge="1" source="cat-precond" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- UPSTREAM CAPABILITIES (Top-Right) -->
+        <!-- UPSTREAM CAPABILITIES GROUP (Top-Right) -->
         <!-- ============================================ -->
-        <mxCell id="cat-upstream" value="Upstream Capabilities" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="100" width="300" height="40" as="geometry" />
+        <mxCell id="grp-upstream" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="970" y="100" width="400" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="up-1" value="Source Code Management (Git)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="160" width="190" height="35" as="geometry" />
+        <mxCell id="cat-upstream" value="Upstream Capabilities" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="50" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="up-2" value="Dependency &amp; package management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1170" y="160" width="200" height="35" as="geometry" />
+        <mxCell id="up-1" value="Source Code Management (Git)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="0" y="60" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="up-3" value="Container registry (GHCR / ECR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="205" width="190" height="35" as="geometry" />
+        <mxCell id="up-2" value="Dependency &amp; package management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="200" y="60" width="200" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="up-4" value="Artifact &amp; binary storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1170" y="205" width="200" height="35" as="geometry" />
+        <mxCell id="up-3" value="Container registry (GHCR / ECR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="0" y="105" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="up-5" value="IaC state backend (Terraform / Pulumi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="250" width="200" height="35" as="geometry" />
+        <mxCell id="up-4" value="Artifact &amp; binary storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="200" y="105" width="200" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="up-6" value="Secret manager (Vault / AWS SSM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="250" width="190" height="35" as="geometry" />
+        <mxCell id="up-5" value="IaC state backend (Terraform / Pulumi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="0" y="150" width="200" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="up-6" value="Secret manager (Vault / AWS SSM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-upstream">
+          <mxGeometry x="210" y="150" width="190" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Upstream -> Workflow -->
-        <mxCell id="link-upstream" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;exitX=0.5;exitY=1;entryX=1;entryY=0;" edge="1" source="cat-upstream" target="wf-main" parent="1">
+        <mxCell id="link-upstream" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;" edge="1" source="cat-upstream" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- NETWORKS (Right) -->
+        <!-- NETWORKS GROUP (Right) -->
         <!-- ============================================ -->
-        <mxCell id="cat-networks" value="Networks" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="380" width="280" height="40" as="geometry" />
+        <mxCell id="grp-networks" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="970" y="380" width="370" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="net-1" value="GitHub Actions hosted network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="970" y="435" width="180" height="35" as="geometry" />
+        <mxCell id="cat-networks" value="Networks" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="grp-networks">
+          <mxGeometry x="50" y="0" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="net-2" value="VPN / private network tunnels" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="435" width="180" height="35" as="geometry" />
+        <mxCell id="net-1" value="GitHub Actions hosted network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="grp-networks">
+          <mxGeometry x="0" y="55" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="net-3" value="Cloud provider VPC (AWS / GCP / Azure)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="970" y="480" width="210" height="35" as="geometry" />
+        <mxCell id="net-2" value="VPN / private network tunnels" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="grp-networks">
+          <mxGeometry x="190" y="55" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="net-4" value="CDN / edge network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1190" y="480" width="150" height="35" as="geometry" />
+        <mxCell id="net-3" value="Cloud provider VPC (AWS / GCP / Azure)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="grp-networks">
+          <mxGeometry x="0" y="100" width="210" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="net-5" value="Service mesh (Istio / Linkerd)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="970" y="525" width="180" height="35" as="geometry" />
+        <mxCell id="net-4" value="CDN / edge network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="grp-networks">
+          <mxGeometry x="220" y="100" width="150" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="net-5" value="Service mesh (Istio / Linkerd)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="grp-networks">
+          <mxGeometry x="0" y="145" width="180" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Networks -> Workflow -->
-        <mxCell id="link-networks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#666666;exitX=0;exitY=0.5;entryX=1;entryY=0.25;" edge="1" source="cat-networks" target="wf-main" parent="1">
+        <mxCell id="link-networks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#666666;" edge="1" source="cat-networks" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- USER GROUPS & TEAMS (Left) -->
+        <!-- USER GROUPS & TEAMS GROUP (Left) -->
         <!-- ============================================ -->
-        <mxCell id="cat-users" value="User Groups &amp; Teams" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="380" width="300" height="40" as="geometry" />
+        <mxCell id="grp-users" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-150" y="380" width="330" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="usr-1" value="Developers / Engineers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="435" width="160" height="35" as="geometry" />
+        <mxCell id="cat-users" value="User Groups &amp; Teams" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="grp-users">
+          <mxGeometry x="20" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="usr-2" value="DevOps / SRE Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="20" y="435" width="160" height="35" as="geometry" />
+        <mxCell id="usr-1" value="Developers / Engineers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="0" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="usr-3" value="QA / Testing Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="480" width="160" height="35" as="geometry" />
+        <mxCell id="usr-2" value="DevOps / SRE Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="170" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="usr-4" value="Security / AppSec Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="20" y="480" width="160" height="35" as="geometry" />
+        <mxCell id="usr-3" value="QA / Testing Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="0" y="100" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="usr-5" value="Product Owners / Stakeholders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="525" width="185" height="35" as="geometry" />
+        <mxCell id="usr-4" value="Security / AppSec Team" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="170" y="100" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="usr-6" value="Release Managers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="45" y="525" width="135" height="35" as="geometry" />
+        <mxCell id="usr-5" value="Product Owners / Stakeholders" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="0" y="145" width="185" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="usr-6" value="Release Managers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="grp-users">
+          <mxGeometry x="195" y="145" width="135" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Users -> Workflow -->
-        <mxCell id="link-users" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#6c8ebf;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" source="cat-users" target="wf-main" parent="1">
+        <mxCell id="link-users" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" source="cat-users" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- KPI & SOP METRICS (Bottom-Left) -->
+        <!-- KPI & SOP METRICS GROUP (Bottom-Left) -->
         <!-- ============================================ -->
-        <mxCell id="cat-kpi" value="KPI &amp; SOP Metrics" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="650" width="300" height="40" as="geometry" />
+        <mxCell id="grp-kpi" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-150" y="650" width="350" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-1" value="Deployment frequency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="705" width="160" height="35" as="geometry" />
+        <mxCell id="cat-kpi" value="KPI &amp; SOP Metrics" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="20" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-2" value="Lead time for changes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="20" y="705" width="160" height="35" as="geometry" />
+        <mxCell id="kpi-1" value="Deployment frequency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="0" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-3" value="Mean time to recovery (MTTR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="750" width="185" height="35" as="geometry" />
+        <mxCell id="kpi-2" value="Lead time for changes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="170" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-4" value="Change failure rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="45" y="750" width="140" height="35" as="geometry" />
+        <mxCell id="kpi-3" value="Mean time to recovery (MTTR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="0" y="100" width="185" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-5" value="Build success / failure rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="795" width="165" height="35" as="geometry" />
+        <mxCell id="kpi-4" value="Change failure rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="195" y="100" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="kpi-6" value="Pipeline duration (P50 / P95)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="25" y="795" width="175" height="35" as="geometry" />
+        <mxCell id="kpi-5" value="Build success / failure rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="0" y="145" width="165" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="kpi-6" value="Pipeline duration (P50 / P95)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="grp-kpi">
+          <mxGeometry x="175" y="145" width="175" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: KPI -> Workflow -->
-        <mxCell id="link-kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#b85450;exitX=0.5;exitY=0;entryX=0;entryY=1;" edge="1" source="cat-kpi" target="wf-main" parent="1">
+        <mxCell id="link-kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#b85450;" edge="1" source="cat-kpi" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- LOCATION FACTORS (Bottom) -->
+        <!-- LOCATION FACTORS GROUP (Bottom) -->
         <!-- ============================================ -->
-        <mxCell id="cat-location" value="Location Factors" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="560" y="700" width="300" height="40" as="geometry" />
+        <mxCell id="grp-location" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="510" y="700" width="420" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="loc-1" value="Multi-region deployment targets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="510" y="755" width="190" height="35" as="geometry" />
+        <mxCell id="cat-location" value="Location Factors" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="grp-location">
+          <mxGeometry x="50" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="loc-2" value="Edge / CDN locations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="710" y="755" width="160" height="35" as="geometry" />
+        <mxCell id="loc-1" value="Multi-region deployment targets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-location">
+          <mxGeometry x="0" y="55" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="loc-3" value="Cloud regions (us-east, eu-west, ap-southeast)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="510" y="800" width="250" height="35" as="geometry" />
+        <mxCell id="loc-2" value="Edge / CDN locations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-location">
+          <mxGeometry x="200" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="loc-4" value="On-premises data centres" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="770" y="800" width="160" height="35" as="geometry" />
+        <mxCell id="loc-3" value="Cloud regions (us-east, eu-west, ap-southeast)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-location">
+          <mxGeometry x="0" y="100" width="250" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="loc-5" value="Data residency / sovereignty zones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="510" y="845" width="200" height="35" as="geometry" />
+        <mxCell id="loc-4" value="On-premises data centres" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-location">
+          <mxGeometry x="260" y="100" width="160" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="loc-5" value="Data residency / sovereignty zones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-location">
+          <mxGeometry x="0" y="145" width="200" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Location -> Workflow -->
-        <mxCell id="link-location" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#d6b656;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" source="cat-location" target="wf-main" parent="1">
+        <mxCell id="link-location" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#d6b656;" edge="1" source="cat-location" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- SYSTEMS & APPLICATIONS (Bottom-Right) -->
+        <!-- SYSTEMS & APPLICATIONS GROUP (Bottom-Right) -->
         <!-- ============================================ -->
-        <mxCell id="cat-systems" value="Systems &amp; Applications" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="650" width="300" height="40" as="geometry" />
+        <mxCell id="grp-systems" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="970" y="650" width="400" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="sys-1" value="GitHub Actions runners" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="705" width="170" height="35" as="geometry" />
+        <mxCell id="cat-systems" value="Systems &amp; Applications" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="grp-systems">
+          <mxGeometry x="50" y="0" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="sys-2" value="Docker / Kubernetes (EKS / GKE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1150" y="705" width="200" height="35" as="geometry" />
+        <mxCell id="sys-1" value="GitHub Actions runners" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="0" y="55" width="170" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="sys-3" value="Terraform / Pulumi (IaC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="750" width="170" height="35" as="geometry" />
+        <mxCell id="sys-2" value="Docker / Kubernetes (EKS / GKE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="180" y="55" width="200" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="sys-4" value="ArgoCD / Flux (GitOps controller)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1150" y="750" width="200" height="35" as="geometry" />
+        <mxCell id="sys-3" value="Terraform / Pulumi (IaC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="0" y="100" width="170" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="sys-5" value="Prometheus / Grafana (monitoring)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="970" y="795" width="200" height="35" as="geometry" />
+        <mxCell id="sys-4" value="ArgoCD / Flux (GitOps controller)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="180" y="100" width="200" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="sys-6" value="Slack / PagerDuty (notifications)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="795" width="190" height="35" as="geometry" />
+        <mxCell id="sys-5" value="Prometheus / Grafana (monitoring)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="0" y="145" width="200" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="sys-6" value="Slack / PagerDuty (notifications)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-systems">
+          <mxGeometry x="210" y="145" width="190" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Systems -> Workflow -->
-        <mxCell id="link-systems" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;exitX=0.5;exitY=0;entryX=1;entryY=1;" edge="1" source="cat-systems" target="wf-main" parent="1">
+        <mxCell id="link-systems" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;" edge="1" source="cat-systems" target="wf-main" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- OUTCOMES (Far Right) -->
+        <!-- OUTCOMES GROUP (Far Right) -->
         <!-- ============================================ -->
-        <mxCell id="cat-outcomes" value="Outcomes" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e6d0de;strokeColor=#996185;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="380" width="260" height="40" as="geometry" />
+        <mxCell id="grp-outcomes" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1390" y="380" width="220" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="out-1" value="Application deployed to target env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="435" width="200" height="35" as="geometry" />
+        <mxCell id="cat-outcomes" value="Outcomes" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e6d0de;strokeColor=#996185;strokeWidth=2;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="30" y="0" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="out-2" value="Infrastructure provisioned / updated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="480" width="200" height="35" as="geometry" />
+        <mxCell id="out-1" value="Application deployed to target env" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="0" y="55" width="210" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="out-3" value="Artifacts published &amp; versioned" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="525" width="200" height="35" as="geometry" />
+        <mxCell id="out-2" value="Infrastructure provisioned / updated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="0" y="100" width="210" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="out-4" value="Release notes &amp; changelog generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="570" width="210" height="35" as="geometry" />
+        <mxCell id="out-3" value="Artifacts published &amp; versioned" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="0" y="145" width="210" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="out-5" value="Stakeholder notifications sent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="615" width="200" height="35" as="geometry" />
+        <mxCell id="out-4" value="Release notes &amp; changelog generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="0" y="190" width="210" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="out-5" value="Stakeholder notifications sent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;" vertex="1" parent="grp-outcomes">
+          <mxGeometry x="0" y="235" width="210" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Workflow -> Outcomes -->
-        <mxCell id="link-outcomes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#996185;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="wf-main" target="cat-outcomes" parent="1">
+        <mxCell id="link-outcomes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#996185;" edge="1" source="wf-main" target="cat-outcomes" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- POST-CONDITIONS (Far Right Bottom) -->
+        <!-- POST-CONDITIONS GROUP (Top Far Right) -->
         <!-- ============================================ -->
-        <mxCell id="cat-postcond" value="Post-Conditions" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="100" width="280" height="40" as="geometry" />
+        <mxCell id="grp-postcond" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1390" y="100" width="370" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="post-1" value="Health checks passing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="160" width="160" height="35" as="geometry" />
+        <mxCell id="cat-postcond" value="Post-Conditions" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="30" y="0" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="post-2" value="Monitoring &amp; alerts configured" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1560" y="160" width="180" height="35" as="geometry" />
+        <mxCell id="post-1" value="Health checks passing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="0" y="60" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="post-3" value="Rollback plan validated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="205" width="160" height="35" as="geometry" />
+        <mxCell id="post-2" value="Monitoring &amp; alerts configured" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="170" y="60" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="post-4" value="Audit trail &amp; logs recorded" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1560" y="205" width="180" height="35" as="geometry" />
+        <mxCell id="post-3" value="Rollback plan validated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="0" y="105" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="post-5" value="Git tag applied to release" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1390" y="250" width="160" height="35" as="geometry" />
+        <mxCell id="post-4" value="Audit trail &amp; logs recorded" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="170" y="105" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="post-6" value="Deployment status synced in ArgoCD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1560" y="250" width="200" height="35" as="geometry" />
+        <mxCell id="post-5" value="Git tag applied to release" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="0" y="150" width="160" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="post-6" value="Deployment status synced in ArgoCD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="grp-postcond">
+          <mxGeometry x="170" y="150" width="200" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Workflow -> Post-Conditions -->
-        <mxCell id="link-postcond" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#9673a6;exitX=1;exitY=0;entryX=0;entryY=0.5;" edge="1" source="wf-main" target="cat-postcond" parent="1">
+        <mxCell id="link-postcond" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#9673a6;" edge="1" source="wf-main" target="cat-postcond" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- DOWNSTREAM CAPABILITIES (Far Left) -->
+        <!-- DOWNSTREAM CAPABILITIES GROUP (Far Left) -->
         <!-- ============================================ -->
-        <mxCell id="cat-downstream" value="Downstream Capabilities" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-410" y="380" width="260" height="40" as="geometry" />
+        <mxCell id="grp-downstream" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-440" y="380" width="360" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="down-1" value="Service mesh traffic routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="435" width="180" height="35" as="geometry" />
+        <mxCell id="cat-downstream" value="Downstream Capabilities" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="30" y="0" width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="down-2" value="Feature flag management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-250" y="435" width="160" height="35" as="geometry" />
+        <mxCell id="down-1" value="Service mesh traffic routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="0" y="55" width="180" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="down-3" value="Canary / blue-green promotion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="480" width="190" height="35" as="geometry" />
+        <mxCell id="down-2" value="Feature flag management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="190" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="down-4" value="Auto-scaling policies activated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-240" y="480" width="185" height="35" as="geometry" />
+        <mxCell id="down-3" value="Canary / blue-green promotion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="0" y="100" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="down-5" value="Observability stack integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="525" width="190" height="35" as="geometry" />
+        <mxCell id="down-4" value="Auto-scaling policies activated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="200" y="100" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="down-6" value="Incident runbook triggers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-240" y="525" width="160" height="35" as="geometry" />
+        <mxCell id="down-5" value="Observability stack integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="0" y="145" width="190" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="down-6" value="Incident runbook triggers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="grp-downstream">
+          <mxGeometry x="200" y="145" width="160" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Workflow -> Downstream -->
-        <mxCell id="link-downstream" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="wf-main" target="cat-downstream" parent="1">
+        <mxCell id="link-downstream" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#82b366;" edge="1" source="wf-main" target="cat-downstream" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
         <!-- ============================================ -->
-        <!-- INITIATIVES & PROJECTS (Far Left Bottom) -->
+        <!-- INITIATIVES & PROJECTS GROUP (Far Left Bottom) -->
         <!-- ============================================ -->
-        <mxCell id="cat-initiatives" value="Initiatives &amp; Projects" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-410" y="650" width="260" height="40" as="geometry" />
+        <mxCell id="grp-initiatives" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-440" y="650" width="365" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="init-1" value="Platform modernisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="705" width="160" height="35" as="geometry" />
+        <mxCell id="cat-initiatives" value="Initiatives &amp; Projects" style="shape=mxgraph.basic.rounded_frame;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="30" y="0" width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="init-2" value="CI/CD pipeline optimisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-270" y="705" width="170" height="35" as="geometry" />
+        <mxCell id="init-1" value="Platform modernisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="0" y="55" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="init-3" value="Security hardening (DevSecOps)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="750" width="190" height="35" as="geometry" />
+        <mxCell id="init-2" value="CI/CD pipeline optimisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="170" y="55" width="170" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="init-4" value="Cloud cost optimisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-240" y="750" width="160" height="35" as="geometry" />
+        <mxCell id="init-3" value="Security hardening (DevSecOps)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="0" y="100" width="190" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="init-5" value="GitOps maturity programme" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="795" width="170" height="35" as="geometry" />
+        <mxCell id="init-4" value="Cloud cost optimisation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="200" y="100" width="160" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="init-6" value="Compliance &amp; audit automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-260" y="795" width="185" height="35" as="geometry" />
+        <mxCell id="init-5" value="GitOps maturity programme" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="0" y="145" width="170" height="35" as="geometry" />
         </mxCell>
+        <mxCell id="init-6" value="Compliance &amp; audit automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="grp-initiatives">
+          <mxGeometry x="180" y="145" width="185" height="35" as="geometry" />
+        </mxCell>
+
         <!-- Link: Workflow -> Initiatives -->
-        <mxCell id="link-initiatives" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#d6b656;exitX=0;exitY=1;entryX=1;entryY=0;" edge="1" source="wf-main" target="cat-initiatives" parent="1">
+        <mxCell id="link-initiatives" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#d6b656;" edge="1" source="wf-main" target="cat-initiatives" parent="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-
-        <!-- ============================================ -->
-        <!-- TITLE -->
-        <!-- ============================================ -->
-        <mxCell id="title" value="DoiTOps Service Flow — Logical View&#xa;GitHub Workflow (GitOps Context)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="-30" width="380" height="60" as="geometry" />
         </mxCell>
 
       </root>
