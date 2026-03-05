@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram id="service-operating-model-canvas" name="Service Operating Model Canvas">
+    <mxGraphModel dx="5667" dy="2678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1360" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-banner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="80" width="1840" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title-text" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;font color=&quot;#ffffff&quot; style=&quot;font-size:28px;&quot;&gt;&lt;b&gt;SERVICE OPERATING MODEL CANVAS&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#a0a0c0&quot; style=&quot;font-size:14px;&quot;&gt;DoiTOps FinOps Service | Based on &quot;The Strategy Journey&quot; by Julie Choo&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="800" x="560" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="partners-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f0ff;strokeColor=#9673a6;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="340" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="partners-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#7c4daa&quot;&gt;&lt;b&gt;PARTNERS &amp;amp; SUPPLIERS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="110" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="partners-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Cloud Providers&lt;/b&gt;&#xa;&lt;br&gt;- Google Cloud Platform (Cloud Run)&#xa;&lt;br&gt;- AWS / Azure (customer workloads)&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Platform Partners&lt;/b&gt;&#xa;&lt;br&gt;- DoiT International (DCI Platform)&#xa;&lt;br&gt;- GitHub (Actions, Apps, Repos)&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;AI / Tooling&lt;/b&gt;&#xa;&lt;br&gt;- Anthropic (Claude Code)&#xa;&lt;br&gt;- OpenCode (plugin ecosystem)&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="316" x="52" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="capabilities-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f2ff;strokeColor=#3a7bbf;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="340" x="400" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="capabilities-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#2a6099&quot;&gt;&lt;b&gt;CAPABILITIES&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="500" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="capabilities-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Upstream (Input)&lt;/b&gt;&#xa;&lt;br&gt;- IaC cost evaluation (pre-commit)&#xa;&lt;br&gt;- Cloud pricing API integration&#xa;&lt;br&gt;- Wastage &amp;amp; anomaly detection&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Core&lt;/b&gt;&#xa;&lt;br&gt;- FinOps cost analysis &amp;amp; reporting&#xa;&lt;br&gt;- Automated PR review &amp;amp; gating&#xa;&lt;br&gt;- DCI dashboard orchestration&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Downstream (Output)&lt;/b&gt;&#xa;&lt;br&gt;- Cost optimisation recommendations&#xa;&lt;br&gt;- Budget alerts &amp;amp; forecasting&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="316" x="-410" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="value-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6a800;strokeWidth=3;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="400" x="760" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="value-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#b8860b&quot;&gt;&lt;b&gt;VALUE PROPOSITION&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="870" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="value-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Shift-Left FinOps integrated into GitOps&lt;/b&gt;&#xa;&lt;br&gt;&#xa;&lt;br&gt;Embed cloud cost governance directly into&#xa;&lt;br&gt;the developer workflow so that every commit,&#xa;&lt;br&gt;merge, and deployment is cost-aware.&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Key Promises:&lt;/b&gt;&#xa;&lt;br&gt;- Prevent cost surprises before they deploy&#xa;&lt;br&gt;- Automate FinOps reporting in CI/CD&#xa;&lt;br&gt;- Continuous post-deploy cost monitoring&#xa;&lt;br&gt;- Single pane of glass via DCI dashboard&#xa;&lt;br&gt;- AI-assisted cost optimisation suggestions&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="370" x="775" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="channels-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6fff2;strokeColor=#2d8659;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="340" x="1180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="channels-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#1a6b3c&quot;&gt;&lt;b&gt;CHANNELS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="1290" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="channels-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Developer Touchpoints&lt;/b&gt;&#xa;&lt;br&gt;- DoiT CLI (terminal)&#xa;&lt;br&gt;- Git pre-commit hooks&#xa;&lt;br&gt;- GitHub PR comments &amp;amp; checks&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;AI-Assisted&lt;/b&gt;&#xa;&lt;br&gt;- Claude Code plugin (/doit evaluate)&#xa;&lt;br&gt;- OpenCode plugin (/dci make report)&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Management&lt;/b&gt;&#xa;&lt;br&gt;- DCI Console (web dashboard)&#xa;&lt;br&gt;- Email / Slack alerts&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="316" x="2120" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="customers-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6e6;strokeColor=#cc3333;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="340" x="1540" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="customers-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#b32d2d&quot;&gt;&lt;b&gt;CUSTOMER SEGMENTS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="1620" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="customers-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Primary&lt;/b&gt;&#xa;&lt;br&gt;- Platform / DevOps Engineers&#xa;&lt;br&gt;- Cloud / Infrastructure Engineers&#xa;&lt;br&gt;- SRE Teams&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Secondary&lt;/b&gt;&#xa;&lt;br&gt;- Engineering Managers&#xa;&lt;br&gt;- FinOps Practitioners&#xa;&lt;br&gt;- Cloud Architects&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Executive&lt;/b&gt;&#xa;&lt;br&gt;- CTOs / VPs Engineering&#xa;&lt;br&gt;- Finance / Procurement&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="316" x="1552" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="governance-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f0eb;strokeColor=#8c6d46;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="520" x="40" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="governance-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#6b5230&quot;&gt;&lt;b&gt;GOVERNANCE &amp;amp; CONTROLS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="190" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="governance-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Policy &amp;amp; Standards&lt;/b&gt;&#xa;&lt;br&gt;- Cost threshold policies per environment&#xa;&lt;br&gt;- Tagging standards enforcement&#xa;&lt;br&gt;- Budget allocation rules per team/project&#xa;&lt;br&gt;- Approved resource SKU catalogues&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Quality Gates&lt;/b&gt;&#xa;&lt;br&gt;- Pre-commit: cost impact check must pass&#xa;&lt;br&gt;- PR merge: FinOps report required, reviewer approval&#xa;&lt;br&gt;- Post-deploy: anomaly detection within 24h SLA&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Compliance&lt;/b&gt;&#xa;&lt;br&gt;- Audit trail of all cost decisions in Git history&#xa;&lt;br&gt;- Segregation of duties (commit != approve != deploy)&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="496" x="52" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="processes-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f0e6;strokeColor=#4a8c4a;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="760" x="580" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="processes-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#2d6b2d&quot;&gt;&lt;b&gt;PROCESSES &amp;amp; ACTIVITIES&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="850" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="processes-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.5;&quot;&gt;&#xa;&lt;table style=&quot;width:100%;border-collapse:collapse;font-size:12px;&quot;&gt;&#xa;&lt;tr&gt;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Phase 1: Pre-Commit&lt;/b&gt;&lt;br&gt;&#xa;1. Developer writes IaC&lt;br&gt;&#xa;2. Pre-commit hook triggers&lt;br&gt;&#xa;3. DoiT CLI evaluates cost&lt;br&gt;&#xa;4. Wastage check runs&lt;br&gt;&#xa;5. Pass/fail feedback in terminal&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;border-left:1px solid #4a8c4a;&quot;&gt;&#xa;&lt;b&gt;Phase 2: Merge &amp;amp; Approval&lt;/b&gt;&lt;br&gt;&#xa;1. PR created on GitHub&lt;br&gt;&#xa;2. GitHub App triggers Actions&lt;br&gt;&#xa;3. FinOps report generated&lt;br&gt;&#xa;4. Report posted to PR&lt;br&gt;&#xa;5. Reviewer approves/rejects&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;border-left:1px solid #4a8c4a;&quot;&gt;&#xa;&lt;b&gt;Phase 3: Post-Deployment&lt;/b&gt;&lt;br&gt;&#xa;1. Deployment completes&lt;br&gt;&#xa;2. DCI monitors usage&lt;br&gt;&#xa;3. Anomaly detection runs&lt;br&gt;&#xa;4. Dashboard updates&lt;br&gt;&#xa;5. Alerts if thresholds breach&#xa;&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;/table&gt;&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="736" x="690" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="people-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff0f5;strokeColor=#b34d80;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="280" width="520" x="1360" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="people-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#8c2d5e&quot;&gt;&lt;b&gt;PEOPLE &amp;amp; ORGANISATION&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="1510" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="people-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;b&gt;Roles&lt;/b&gt;&#xa;&lt;br&gt;- Service Owner: FinOps Lead&#xa;&lt;br&gt;- Operators: Platform Engineering Team&#xa;&lt;br&gt;- Contributors: All engineers (IaC commits)&#xa;&lt;br&gt;- Approvers: Tech Leads / Architects&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Organisation Model&lt;/b&gt;&#xa;&lt;br&gt;- Federated: each team owns their cost&#xa;&lt;br&gt;- Central FinOps team sets policy &amp;amp; tooling&#xa;&lt;br&gt;- RACI: Dev (Responsible), FinOps (Accountable),&#xa;&lt;br&gt;&amp;nbsp;&amp;nbsp;Architect (Consulted), Finance (Informed)&#xa;&lt;br&gt;&#xa;&lt;br&gt;&lt;b&gt;Skills &amp;amp; Training&lt;/b&gt;&#xa;&lt;br&gt;- FinOps Foundation certification&#xa;&lt;br&gt;- DoiT CLI / DCI platform onboarding&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="225" width="496" x="1384" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eaf6;strokeColor=#5c6bc0;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="220" width="1840" x="40" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#3949ab&quot;&gt;&lt;b&gt;TECHNOLOGY &amp;amp; TOOLS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="870" y="728" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.5;&quot;&gt;&#xa;&lt;table style=&quot;width:100%;border-collapse:collapse;font-size:12px;&quot;&gt;&#xa;&lt;tr&gt;&#xa;&lt;td style=&quot;padding:6px;vertical-align:top;width:20%;&quot;&gt;&#xa;&lt;b&gt;CLI &amp;amp; Plugins&lt;/b&gt;&lt;br&gt;&#xa;- DoiT CLI&lt;br&gt;&#xa;- Claude Code Plugin&lt;br&gt;&#xa;- OpenCode Plugin&lt;br&gt;&#xa;- Git hooks (pre-commit)&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:6px;vertical-align:top;width:20%;border-left:1px solid #5c6bc0;&quot;&gt;&#xa;&lt;b&gt;CI/CD &amp;amp; Source Control&lt;/b&gt;&lt;br&gt;&#xa;- GitHub (repos, PRs)&lt;br&gt;&#xa;- GitHub Actions&lt;br&gt;&#xa;- GitHub App (DoiT)&lt;br&gt;&#xa;- Branch protection rules&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:6px;vertical-align:top;width:20%;border-left:1px solid #5c6bc0;&quot;&gt;&#xa;&lt;b&gt;Cloud Run Services&lt;/b&gt;&lt;br&gt;&#xa;- Pricing Proxy Service&lt;br&gt;&#xa;- DCI Interaction Service&lt;br&gt;&#xa;- DoiT Compute Service&lt;br&gt;&#xa;- Load Balancers (GLB)&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:6px;vertical-align:top;width:20%;border-left:1px solid #5c6bc0;&quot;&gt;&#xa;&lt;b&gt;APIs&lt;/b&gt;&lt;br&gt;&#xa;- /pricing/{service}/{resource}&lt;br&gt;&#xa;- /usage/nat-gateway?account=&lt;br&gt;&#xa;- DCI Platform APIs&lt;br&gt;&#xa;- Cloud provider billing APIs&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:6px;vertical-align:top;width:20%;border-left:1px solid #5c6bc0;&quot;&gt;&#xa;&lt;b&gt;Monitoring &amp;amp; Dashboards&lt;/b&gt;&lt;br&gt;&#xa;- DCI Console (web)&lt;br&gt;&#xa;- Anomaly detection engine&lt;br&gt;&#xa;- Budget alerts system&lt;br&gt;&#xa;- Cost allocation reports&#xa;&lt;/td&gt;&#xa;&lt;/tr&gt;&#xa;&lt;/table&gt;&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="1816" x="600" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="cost-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#e57373;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="200" width="910" x="40" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="cost-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#c62828&quot;&gt;&lt;b&gt;COST STRUCTURE&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="400" y="968" as="geometry" />
+        </mxCell>
+        <mxCell id="cost-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;table style=&quot;width:100%;font-size:12px;&quot;&gt;&#xa;&lt;tr&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Infrastructure&lt;/b&gt;&lt;br&gt;&#xa;- Cloud Run hosting&lt;br&gt;&#xa;- Load balancer costs&lt;br&gt;&#xa;- API gateway / egress&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Licensing&lt;/b&gt;&lt;br&gt;&#xa;- DoiT DCI platform fees&lt;br&gt;&#xa;- GitHub Enterprise&lt;br&gt;&#xa;- Claude Code API usage&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;People&lt;/b&gt;&lt;br&gt;&#xa;- FinOps team headcount&lt;br&gt;&#xa;- Platform engineering time&lt;br&gt;&#xa;- Training &amp;amp; certification&#xa;&lt;/td&gt;&#xa;&lt;/tr&gt;&#xa;&lt;/table&gt;&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="886" x="240" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="kpi-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="200" width="910" x="970" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="kpi-header" parent="1" style="text;html=1;align=center;verticalAlign=top;resizable=0;points=[];autosize=1;" value="&lt;font style=&quot;font-size:14px;&quot; color=&quot;#2e7d32&quot;&gt;&lt;b&gt;KPI &amp;amp; SOP METRICS&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1340" y="968" as="geometry" />
+        </mxCell>
+        <mxCell id="kpi-content" parent="1" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;spacingLeft=8;" value="&lt;div style=&quot;text-align:left;font-size:12px;line-height:1.6;&quot;&gt;&#xa;&lt;table style=&quot;width:100%;font-size:12px;&quot;&gt;&#xa;&lt;tr&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Efficiency&lt;/b&gt;&lt;br&gt;&#xa;- % commits with cost check&lt;br&gt;&#xa;- Mean time to cost feedback&lt;br&gt;&#xa;- Pre-commit pass rate&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Effectiveness&lt;/b&gt;&lt;br&gt;&#xa;- Cost avoided ($ pre-deploy)&lt;br&gt;&#xa;- Anomalies caught within SLA&lt;br&gt;&#xa;- Budget variance (actual vs plan)&#xa;&lt;/td&gt;&#xa;&lt;td style=&quot;padding:4px;vertical-align:top;width:33%;&quot;&gt;&#xa;&lt;b&gt;Adoption&lt;/b&gt;&lt;br&gt;&#xa;- Teams onboarded (%)&lt;br&gt;&#xa;- CLI / plugin daily active users&lt;br&gt;&#xa;- FinOps maturity score (crawl/walk/run)&#xa;&lt;/td&gt;&#xa;&lt;/tr&gt;&#xa;&lt;/table&gt;&#xa;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="886" x="1110" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" edge="1" parent="1" source="partners-box" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9e9e9e;strokeWidth=1;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="value-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" edge="1" parent="1" source="customers-box" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9e9e9e;strokeWidth=1;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="value-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" edge="1" parent="1" source="processes-box" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9e9e9e;strokeWidth=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="value-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" edge="1" parent="1" source="tech-box" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9e9e9e;strokeWidth=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="processes-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;font color=&quot;#888888&quot; style=&quot;font-size:11px;&quot;&gt;DoiTOps Service Operating Model Canvas | Adapted from &quot;The Strategy Journey&quot; by Julie Choo | March 2026&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="760" x="580" y="1180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
